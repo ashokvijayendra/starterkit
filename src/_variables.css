@@ -1,0 +1,13 @@
+:root {
+    --breakpoints-lg: 1728px;
+    --breakpoints-sm: 390px;
+    --sizes-16: 1rem;
+    --lineheight-20-11: 1.256rem;
+    --color-accent-teal: #0082AA;
+    --color-white: #ffffff;
+    --typography-paragraph-font-size: 1rem;
+    --typography-paragraph-font-family: 'Source Sans Pro', sans-serif;
+    --typography-paragraph-font-weight: 400;
+    --typography-paragraph-line-height: 1.256rem;
+  }
+  
