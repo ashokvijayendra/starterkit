@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './typography.module.css';
 import {
     mapStyleProps,
-  } from '../../utils/styleUtil';
+  } from '../../../utils/styleUtil';
 
 interface TypographyProps {
     tag?: string,

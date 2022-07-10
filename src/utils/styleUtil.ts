@@ -23,11 +23,13 @@ const styleProps: ObjectType = {
     bLW: 'borderLeftWidth',
     bRW: 'borderRightWidth',
     bSW: 'borderStartWidth',
+    bc: 'backgroundColor',
     bTW: 'borderTopWidth',
     bW: 'borderWidth',
     bR: 'borderRadius',
     padding: 'padding',
-    backgorundColor: 'backgroundColor'
+    backgorundColor: 'backgroundColor',
+    direction: 'flexDirection'
 };
 
 export function mapStyleProps(
