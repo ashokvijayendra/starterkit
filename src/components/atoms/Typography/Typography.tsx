@@ -10,7 +10,50 @@ interface TypographyProps {
     children: any,
     id: string,
     className: string,
-    style: object
+    style: object,
+    pL?: number | string; // paddingLeft
+    pT?: number | string; // paddingTop
+    pR?: number | string; // paddingRight
+    pB?: number | string; // paddingBottom
+    mL?: number | string; // marginLeft
+    mT?: number | string; // marginTop
+    mR?: number | string; // marginRight
+    mB?: number | string; // marginBottom
+    mS?: number | string; // marginStart
+    mE?: number | string; // marginEnd
+    bBW?: number | string; //borderBottomWidth
+    bEW?: number | string; //borderEndWidth
+    bLW?: number | string; //borderLeftWidth
+    bRW?: number | string; //borderRightWidth
+    bSW?: number | string; //borderStartWidth
+    bTW?: number | string; //borderTopWidth
+    bW?: number | string; // borderWidth
+    bR?: number | string; //borderRadius
+    m?: number | string; // margin
+    p?: number | string; // padding
+    w?: number | string; // width
+    h?: number | string; // height
+    flex?: number;
+    alignItems?: string;
+    justifyContent?: string;
+    alignContent?: string;
+    padding?: number | string;
+    bc?: any;
+    backgroundColor?: any;
+    width?: number | string;
+    height?: number | string;
+    minWidth?: number | string;
+    maxWidth?: number | string;
+    minHeight?: number | string;
+    maxHeight?: number | string;
+    position?: 'absolute' | 'relative' | 'fixed' | 'static';
+    top?: number | string;
+    left?: number | string;
+    right?: number | string;
+    bottom?: number | string;
+    zIndex?: number | string;
+    flexDirection?: string;
+    direction?: string;
 }
 
 const variants: any = {

@@ -1,0 +1,13 @@
+.container {
+  padding-top: 66px;
+  padding-bottom: 66px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 16px;
+  }
+}

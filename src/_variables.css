@@ -1,6 +1,6 @@
 :root {
     --breakpoints-lg: 1728px;
-    --breakpoints-sm: 390px;
+    --breakpoints-sm: 580px;
     --sizes-16: 1rem;
     --lineheight-20-11: 1.256rem;
     --color-accent-teal: #0082AA;
