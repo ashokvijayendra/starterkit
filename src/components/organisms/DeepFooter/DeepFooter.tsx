@@ -4,18 +4,17 @@ import Container from '../../atoms/Container';
 import SpotLight from '../../molecules/SpotLight';
 import Links from '../../atoms/Links';
 import Typography from '../../atoms/Typography';
-export type DeepFooterProps = {};
+export type DeepFooterProps = { copyright: string, items: any};
 
-const DeepFooter: React.FC<DeepFooterProps> = (props: DeepFooterProps) => {
+const DeepFooter: React.FC<DeepFooterProps> = ({copyright, items}: DeepFooterProps) => {
   return (
      <Container className={styles.container} w={'100%'}>
-        <Typography variant='paragraph' style={{flexGrow: 1}}>© Copyright 2022 Walgreens Co. All rights reserved.</Typography>
+        <Typography variant='paragraph' style={{flexGrow: 1}}>{copyright}</Typography>
         <Container>
-          <Links  direction='row'/>
+          <Links  direction='row' items={items}/>
         </Container>
      </Container>
   );
 };
-
 
 export default DeepFooter;

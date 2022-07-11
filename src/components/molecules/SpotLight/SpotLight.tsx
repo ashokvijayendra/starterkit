@@ -3,18 +3,22 @@ import styles from './spotlight.module.css';
 import Container from '../../atoms/Container';
 import Typography from '../../atoms/Typography';
 
+export type SpotLightProps = { style: any,
+  logo_image_path: any, 
+  logo_image_alt_tex: any, 
+  logo_image_url: any,  
+  subheading: any
+};
 
-export type SpotLightProps = { style: any};
-
-const SpotLight: React.FC<SpotLightProps> = ({style, ...rest}: SpotLightProps) => {
+const SpotLight: React.FC<SpotLightProps> = ({style, logo_image_path, logo_image_alt_tex, logo_image_url,  subheading}: SpotLightProps) => {
   return (
     <Container direction='column' {...style}>
       <Container direction='row'>
         <Container direction='row' w={75} h={49}>
-          <img src={"https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg"}/>
+          <a href={logo_image_url}><img src={logo_image_path} alt-text={logo_image_alt_tex} /></a>
         </Container>
       </Container>
-      <Typography variant='paragraph' w={305}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Typography>
+      <Typography variant='paragraph' w={305}>{subheading}</Typography>
     </Container>
   );
 };
