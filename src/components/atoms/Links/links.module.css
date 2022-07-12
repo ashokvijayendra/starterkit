@@ -1,0 +1,12 @@
+@media screen and (width: 36.25rem) {
+    .link{
+        margin-right:4.25rem;
+    }
+    
+  .container {
+    display: block;
+  }
+}
+.column {
+  flex-direction: column;
+}

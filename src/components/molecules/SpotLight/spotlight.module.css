@@ -1,0 +1,18 @@
+.logo {
+  margin-bottom: 1.5625rem;
+}
+
+@media screen and (max-width: 36.25rem) {
+  .logo {
+    margin-top: 2.5625rem;
+    margin-bottom: 1.5625rem;
+    margin-left: 3.375rem;
+    margin-right: 7.125rem;
+    width: 100%;
+  }
+  .text {
+    margin-left: 3.375rem;
+    margin-right: 1.9375rem;
+    margin-bottom: 2.8125rem;
+  }
+}

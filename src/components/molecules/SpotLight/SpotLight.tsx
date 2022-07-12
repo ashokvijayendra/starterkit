@@ -13,12 +13,12 @@ export type SpotLightProps = { style: any,
 const SpotLight: React.FC<SpotLightProps> = ({style, logo_image_path, logo_image_alt_tex, logo_image_url,  subheading}: SpotLightProps) => {
   return (
     <Container direction='column' {...style}>
-      <Container direction='row'>
-        <Container direction='row' w={75} h={49}>
-          <a href={logo_image_url}><img src={logo_image_path} alt-text={logo_image_alt_tex} /></a>
+      <Container direction='row' >
+        <Container direction='row'  w={126.06}>
+          <a href={logo_image_url}><img src={logo_image_path} className={styles.logo}  alt={logo_image_alt_tex} /></a>
         </Container>
       </Container>
-      <Typography variant='paragraph' w={305}>{subheading}</Typography>
+      <Typography variant='paragraph' w={305}   className={styles.text}>{subheading} </Typography>
     </Container>
   );
 };

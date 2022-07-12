@@ -1,13 +1,29 @@
 .container {
-  padding-top: 92px;
-  padding-bottom: 8px;
-  padding-left: 3%;
-  padding-right: 3%;
+  margin-top: 4.31rem;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+  height: 18.825rem;
+}
+/* .check>div>a{
+background-color: red !important;
+} */
+.media {
+  flex-direction: row;
 }
 
 @media screen and (max-width: 580px) {
   .container {
-    padding-top: 60px;
-    padding-bottom: 16px;
+    margin: 0;
+  }
+
+  .links {
+    margin-top: 1.5rem;
+  }
+
+  .media {
+    flex-direction: column;
+    margin-right: 4.25rem;
+    /* text-align: start; */
+    margin-left: 120px;
   }
 }

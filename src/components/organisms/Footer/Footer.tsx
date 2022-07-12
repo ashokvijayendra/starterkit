@@ -10,51 +10,54 @@ const SpotLightProps = {
   "logo_image_path": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
   "logo_image_alt_tex": "",
   "logo_image_url": "/content/wag-spa-react/us/en",
-  "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
 };
 
 const Links1Props = [{
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+  "url": "/how-we-help-2/how-we-help",
+  "text": "How we help",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+  "url": "/research-insights/research-and-insights",
+  "text": "Research & Insights",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+  "url": "/quick-access-forms",
+  "text": "Forms",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
-}];
+  "url": "/contact",
+  "text": "Contact Us",
+},];
 
-const Links2Props = [{
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+const Links2Props = [ {
+ "url": "url1",
+  "text": "Footer Link 1",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+ "url": "url2",
+  "text": "Footer Link 1",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
+ "url": "url3",
+  "text": "Footer Link 1",
 },
 {
-  "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
-  "text": "How can we help"
-}];
+ "url": "https://www.walgreens.comurl4",
+  "text": "Visit Walgreens.com",
+},];
 
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   return (
-    <Container className={styles.container} w={'100%'}>
+    <Container className={styles.container}>
       <SpotLight style={{ flexGrow: 1 }} {...SpotLightProps} />
-      <Container direction='row' childrenWidth={"equal"}>
-        <Links items={Links1Props}/>
-        <Links items={Links2Props}/>
-      </Container>
+      <Container className={styles.media} mR={72} childrenWidth={"equal"}>
+        <Links  items={Links1Props}/>
+      <div className={styles.links}>
+       <Links items={Links2Props}/>
+      </div>
+      
+     </Container>
     </Container>
   );
 };

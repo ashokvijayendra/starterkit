@@ -30,9 +30,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Container bc="#323264" direction='column'>
+        <Container bc="#5BADCD" direction='column'>
           <Footer />
-          <DeepFooter {...DeepFooterProps} />
+          {/* <DeepFooter {...DeepFooterProps} /> */}
         </Container>
       </header>
     </div>
