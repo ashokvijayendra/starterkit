@@ -1,13 +1,34 @@
 .container {
-  padding-top: 66px;
-  padding-bottom: 66px;
-  padding-left: 3%;
-  padding-right: 3%;
+  margin-top: 92px;
+  justify-content: space-between;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px none hsla(0, 0%, 100%, 0.1);
 }
 
-@media screen and (max-width: 580px) {
+.links > li{
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 991px) {
   .container {
-    padding-top: 60px;
-    padding-bottom: 16px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    text-align: left;
+    align-items: left;
+  }
+  .links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .links > li{
+    margin-left: 0;
   }
 }

@@ -8,6 +8,7 @@ interface ContainerInterfaceProps {
   children?: ReactNode;
   childrenWidth?: any;
   style?: any;
+  tag?: string;
   className?: string;
   pL?: number | string; // paddingLeft
   pT?: number | string; // paddingTop
@@ -71,13 +72,15 @@ const Container: React.FC<ContainerProps> = ({
   children = '',
   childrenWidth = null,
   className = "",
+  tag = "div",
   style = {},
   ...otherProps
 }: ContainerProps) => {
   const propsKeys = otherProps as ObjectType;
   const styleProps: any = mapStyleProps(propsKeys);
+  const Tag = tag as keyof JSX.IntrinsicElements;
   return (
-    <div className={`${styles.container} ${className}`} style={{...style, ...styleProps}}>{RenderChildren(children,childrenWidth)}</div>
+    <Tag className={`${styles.container} ${className}`} style={{...style, ...styleProps}}>{RenderChildren(children,childrenWidth)}</Tag>
   );
 };
 

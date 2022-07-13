@@ -74,7 +74,7 @@ export const Typography = (props: TypographyProps)  => {
 }
 
 Typography.defaultProps = {
-    Tag: "div",
+    tag: "div",
     variant: "paragraph",
     id: "",
     className: "",

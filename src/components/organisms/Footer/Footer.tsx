@@ -3,6 +3,7 @@ import styles from './footer.module.css';
 import Container from '../../atoms/Container';
 import SpotLight from '../../molecules/SpotLight';
 import Links from '../../atoms/Links';
+import DeepFooter from './../DeepFooter';
 
 export type FooterProps = {};
 
@@ -30,34 +31,51 @@ const Links1Props = [{
   "text": "Contact Us",
 },];
 
-const Links2Props = [ {
- "url": "url1",
+const Links2Props = [{
+  "url": "url1",
   "text": "Footer Link 1",
 },
 {
- "url": "url2",
+  "url": "url2",
   "text": "Footer Link 1",
 },
 {
- "url": "url3",
+  "url": "url3",
   "text": "Footer Link 1",
 },
 {
- "url": "https://www.walgreens.comurl4",
+  "url": "https://www.walgreens.comurl4",
   "text": "Visit Walgreens.com",
 },];
 
+
+const DeepFooterProps = {
+  "copyright": "© Copyright 2022 Walgreens Co. All rights reserved.",
+  "items": [{
+    "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
+    "text": "Notice of Privacy Practices"
+  },
+  {
+    "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
+    "text": "Terms of Use"
+  },
+  {
+    "url": "https://assets.website-files.com/629ff19cdb820268d08e9efc/629ff5dcedd887726abd7dce_Logo.svg",
+    "text": "Online Privacy & Security"
+  }],
+};
+
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
   return (
-    <Container className={styles.container}>
-      <SpotLight style={{ flexGrow: 1 }} {...SpotLightProps} />
-      <Container className={styles.media} mR={72} childrenWidth={"equal"}>
-        <Links  items={Links1Props}/>
-      <div className={styles.links}>
-       <Links items={Links2Props}/>
-      </div>
-      
-     </Container>
+    <Container tag="footer" className={styles.container} direction="column">
+      <Container className={styles.innerContainer} direction="column">
+        <Container className={`${styles.wrapper} ${styles.grid}`}>
+          <SpotLight className={styles.spotlight} style={{ flexGrow: 1 }} {...SpotLightProps} />
+          <Links items={Links1Props} className={`${styles.links} ${styles.column2}`}/>
+          <Links items={Links2Props} className={`${styles.links} ${styles.column3}`} />
+        </Container>
+        <DeepFooter {...DeepFooterProps} />
+      </Container>
     </Container>
   );
 };

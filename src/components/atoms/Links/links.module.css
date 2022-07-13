@@ -1,8 +1,9 @@
+.link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 @media screen and (width: 36.25rem) {
-    .link{
-        margin-right:4.25rem;
-    }
-    
   .container {
     display: block;
   }

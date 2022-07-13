@@ -8,10 +8,10 @@ export type DeepFooterProps = { copyright: string, items: any};
 
 const DeepFooter: React.FC<DeepFooterProps> = ({copyright, items}: DeepFooterProps) => {
   return (
-     <Container className={styles.container} w={'100%'}>
-        <Typography variant='paragraph' style={{flexGrow: 1}}>{copyright}</Typography>
+     <Container className={styles.container}>
+        <Typography variant='paragraph' pT={10} pB={10} style={{flexGrow: 1}}>{copyright}</Typography>
         <Container>
-          <Links  direction='row' items={items}/>
+          <Links  className={styles.links} direction='row' items={items}/>
         </Container>
      </Container>
   );

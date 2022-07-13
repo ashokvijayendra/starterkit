@@ -3,14 +3,14 @@ import styles from './links.module.css';
 import Container from '../Container';
 import Typography from '../Typography';
 
-export type LinksProps = { direction?: string, items: any};
+export type LinksProps = { direction?: string, items: any, className?: string, style?: any};
 
-const Links: React.FC<LinksProps> = ({direction, items}: LinksProps) => {
+const Links: React.FC<LinksProps> = ({direction, items, className = "", style}: LinksProps) => {
   if(!items && !items.lenght) return null;
   return (
-    <Container direction={direction || 'column'} >
+    <Container direction={direction || 'column'} className={className} tag="ul" {...style}>
       {items.map((link: any) => {
-        return <a href={link.url} className={styles.link}><Typography variant='paragraph' mB={8} h={23} w={178}>{link.text}</Typography></a>;
+        return <li className={styles.link}><a href={link.url} ><Typography variant='paragraph'>{link.text}</Typography></a></li>;
       })}
     </Container>
   );
