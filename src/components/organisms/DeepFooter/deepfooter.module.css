@@ -18,10 +18,10 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 479px) {
   .container {
     text-align: left;
-    align-items: left;
+    align-items: flex-start;
   }
   .links {
     justify-content: flex-start;
